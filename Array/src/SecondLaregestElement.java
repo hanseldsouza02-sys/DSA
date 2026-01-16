@@ -7,7 +7,7 @@ class Solution {
         Arrays.sort(arr);
         int n = arr.length;
         int larg = arr[n-1];
-        int secd = -1
+        int secd = -1;
         for(int i =n-2;i>=0;i--){
             if( larg != secd){
                 secd= arr[i];
@@ -16,7 +16,7 @@ class Solution {
         }
 
 
-        //optimized approach
+        //1 optimized approach
          int lrg = Integer.MIN_VALUE;
          int scd = -1;
          for(int i = 0;i<n;i++){
@@ -29,7 +29,18 @@ class Solution {
                 scd = arr[j];
             }
         }
-        return scd;
+
+        // 2nd optimal solution
+
+        for(int i =0;i<n;i++){
+            if(lrg < arr[i] ){
+                scd = lrg;
+                lrg = arr[i];
+            }else if(scd < arr[i]){
+                scd = arr[i];
+            }
+        }
+
 
     }
 }
