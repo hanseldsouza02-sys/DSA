@@ -1,6 +1,5 @@
 class Solution {
     public void reverse(int[] nums,int d,int k){
-        int n = nums.length;
         int i =d;
         int j = k;
         int temp;
