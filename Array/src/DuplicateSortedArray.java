@@ -1,6 +1,22 @@
+import java.util.HashMap;
+import java.util.Set;
+import java.util.HashSet;
 class Solution {
     public int removeDuplicates(int[] nums) {
         //BRUTE FORCE SOLUTION
+//        HashSet<Integer> dp = new HashSet<>();
+//        int n = nums.length;
+//        for(int i = 0 ;i< n;i++){
+//            dp.add(nums[i]);
+//        }
+//        int idx = 0;
+//        for(int ele : dp){
+//            nums[idx] = ele;
+//            idx++;
+//        }
+//        return idx;
+
+        // OPTIMIZED
 //        int n = nums.length;
 //        int count = 1;
 //        for(int i =1;i<n;i++){
