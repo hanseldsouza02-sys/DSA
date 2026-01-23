@@ -18,6 +18,42 @@ class Solution {
 
         return set.iterator().next();
 
+        //BRUTE FORCE
+        int n = nums.length;
+        int ans = 0;
+        boolean flag;
+        for(int i =0;i<=n;i++){
+            flag = false;
+            for(int j =0;j<n;j++){
+                if(i == nums[j]){
+                    flag = true;
+                    break;
+                }
+            }
+            if(!flag){
+                ans = i;
+            }
+        }
+        return ans;
+
+        int n = nums.length;
+        int ans = 0;
+        boolean flag;
+        boolean[] check = new boolean[n+1];
+        for(int i = 0 ;i<=n ;i++){
+            check[i] = false;
+        }
+        for(int i =0;i<n;i++){
+            check[nums[i]] = true;
+        }
+
+        for(int i =0;i<=n;i++){
+            if(check[i] == false){
+                ans = i;
+            }
+        }
+        return ans;
+
 
         //OPTIMAL SOLUTION
         int n = nums.length;
