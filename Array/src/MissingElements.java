@@ -66,5 +66,16 @@ class Solution {
 
         return sum - Asum;
 
+        int n = nums.length;
+        int ans1 = 0;
+        int ans2 = 0;
+        for(int i =0;i<=n;i++){
+            ans1^=i;
+        }
+        for(int j =0;j<n;j++){
+            ans2^=nums[j];
+        }
+        return ans1^ans2;
+    }
     }
 }
