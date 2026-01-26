@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class Solution {
     public int subarraySum(int[] nums, int k) {
 
@@ -35,5 +37,52 @@ class Solution {
         return len;
 
 
+    //optimal solution
+
+    HashMap<Integer,Integer> map = new HashMap<>();
+    int n = nums.length;
+    int len = 0;
+    int presum =0;
+    int Mlen =0;
+    presum = 0;
+        for(int i=0;i<n;i++){
+        presum +=nums[i];
+        len =0;
+        if(presum == k){
+            len = i+1;
+        }else if(map.containsKey(presum - k)){
+            int idx = map.get(presum - k);
+            len = i-idx;
+
+        }
+
+        if(Mlen<len){
+            Mlen = len;
+        }
+        if(!map.containsKey(presum)){
+            map.put(presum,i);
+        }
+    }
+
+        return Mlen;
+
+
+        //optimal solution (for +ve numb er only)
+
+    int i = 0;
+    int j =0;
+    int len =0;
+    int Mlen =0;
+    int sum =0;
+    while(i<n){
+        sum += nums[i];
+        while(sum > k && j<=i){
+            sum -= nums[i];
+            j++;
+        }
+        if(sum == k){
+            Mlen = math.max(Mlen,i-j+1);
+        }
+        i++;
     }
 }
