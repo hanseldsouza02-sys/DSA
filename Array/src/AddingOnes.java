@@ -11,6 +11,22 @@ class Solution {
                 a[i]++;
             }
         }
+
+        //opimal solution
+        for(int i =0;i<k;i++){
+            int x = updates[i] -1;
+            a[x]++;
+        }
+        int sum =0;
+        for(int j =0;j<n;j++){
+            if(j ==0){
+                sum = a[j];
+            }else{
+                sum += a[j];
+            }
+            a[j] = sum;
+        }
+
     }
 }
 
