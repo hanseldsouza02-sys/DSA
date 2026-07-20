@@ -25,7 +25,10 @@ class Solution {
                 high--;
             }
         }
-        // BETTER
+    }
+
+    // BETTER
+    public void sortColorsBetter(int[] nums) {
         int n = nums.length;
         int count0 =0;
         int count1 = 0;

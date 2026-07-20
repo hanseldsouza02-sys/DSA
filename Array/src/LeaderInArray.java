@@ -16,8 +16,10 @@ class Solution {
         }
         Collections.reverse(ans);
         return ans;
+    }
 
-        //Bruit Force
+    //Bruit Force
+    static ArrayList<Integer> leadersBrute(int arr[]) {
         int n = arr.length;
         boolean flag = false;
         ArrayList<Integer> ans = new ArrayList<Integer>();

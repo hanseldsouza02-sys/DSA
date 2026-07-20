@@ -17,7 +17,7 @@ public class UnquiPaths {
         if(cr > er || cc > ec) return 0;
         return paths(cr+1,cc,er,ec) + paths(cr,cc+1,er,ec);
     }
-    public int uniquePaths(int m, int n) {
+    public int uniquePathsRecursive(int m, int n) {
         return paths(0,0,m-1,n-1);
     }
 }

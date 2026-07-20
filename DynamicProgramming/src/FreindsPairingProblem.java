@@ -6,10 +6,10 @@ public class FreindsPairingProblem {
         return help(n,dp);
 
     }
-    public long help(int n,int[] dp){
+    public long help(int n,long[] dp){
         if(n<=2) return n;
         if(dp[n] != 0) return dp[n];
-        return dp[n] = help(n-1) + (n-1)*help(n-2);
+        return dp[n] = help(n-1,dp) + (n-1)*help(n-2,dp);
 
 }
 }

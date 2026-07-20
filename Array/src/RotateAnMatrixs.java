@@ -27,8 +27,10 @@ class GFG {
                 mat[i][m-j-1] = temp;
             }
         }
+    }
 
-        //BRUTE FORCE
+    //BRUTE FORCE
+    static void rotateBrute(int mat[][]) {
         int n = mat.length;
         int m = mat.length;
         int[][] extra = new int[n][m];

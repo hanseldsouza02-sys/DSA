@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class Solution {
     public int majorityElement(int[] nums) {
         HashMap<Integer,Integer> map = new HashMap<>();
@@ -10,7 +12,9 @@ class Solution {
             }
         }
         return -1;
+    }
 
+    public int majorityElementBrute(int[] nums) {
         int n = nums.length;
         for(int i =0;i<n;i++){
             int x = nums[i];
@@ -25,9 +29,10 @@ class Solution {
             }
         }
         return -1;
+    }
 
-
-// USING MOORES VOTING ALGORITHUM
+    // USING MOORES VOTING ALGORITHUM
+    public int majorityElementMoores(int[] nums) {
         int n = nums.length;
         int ele = 0;
         int count = 0;

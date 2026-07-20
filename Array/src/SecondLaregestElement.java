@@ -14,24 +14,32 @@ class Solution {
                 return secd;
             }
         }
+        return secd;
+    }
 
-
-        //1 optimized approach
-         int lrg = Integer.MIN_VALUE;
-         int scd = -1;
-         for(int i = 0;i<n;i++){
-             if(lrg < arr[i]){
-                 lrg = arr[i];
-             }
-         }
+    //1 optimized approach
+    public int getSecondLargestOptimal(int[] arr) {
+        int n = arr.length;
+        int lrg = Integer.MIN_VALUE;
+        int scd = -1;
+        for(int i = 0;i<n;i++){
+            if(lrg < arr[i]){
+                lrg = arr[i];
+            }
+        }
         for(int j = 0 ;j<n;j++){
             if(scd < arr[j] && arr[j] != lrg){
                 scd = arr[j];
             }
         }
+        return scd;
+    }
 
-        // 2nd optimal solution
-
+    // 2nd optimal solution
+    public int getSecondLargestOptimalTwo(int[] arr) {
+        int n = arr.length;
+        int lrg = Integer.MIN_VALUE;
+        int scd = -1;
         for(int i =0;i<n;i++){
             if(lrg < arr[i] ){
                 scd = lrg;
@@ -40,7 +48,6 @@ class Solution {
                 scd = arr[i];
             }
         }
-
-
+        return scd;
     }
 }

@@ -1,10 +1,10 @@
 public class BinarySeachUsingRecusion {
-    public static int found(int[] arr,int lo = 0,int hi = n-1,int ele,){
+    public static int found(int[] arr,int lo,int hi,int ele){
         if(lo>hi) return -1;
         int mid =(lo + hi)/2;
         if(arr[mid] == ele) return mid;
         else if(arr[mid] > ele) return found(arr,lo,mid-1,ele);
-        else if(arr[mid] < ele) return found(arr,mid+1,hi,ele);
+        else return found(arr,mid+1,hi,ele);
 
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class LIS_TABULATION {
     static int lis(int arr[]) {
         // code here

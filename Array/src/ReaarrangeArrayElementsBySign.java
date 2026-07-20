@@ -33,8 +33,9 @@ class Solution {
             i++;
         }
         return nums;
+    }
 
-
+    public int[] rearrangeArrayOptimal(int[] nums) {
         int n = nums.length;
         int[] ans = new int[n];
         int pos =0;
@@ -49,9 +50,11 @@ class Solution {
             }
         }
         return ans;
+    }
 
-        // Slight variation of the problem
+    // Slight variation of the problem
 
+    public int[] rearrangeArrayVariation(int[] nums) {
         int n = nums.length;
         ArrayList<Integer> pos = new ArrayList<>();
         ArrayList<Integer> neg = new ArrayList<>();
@@ -92,6 +95,6 @@ class Solution {
             k++;
         }
 
-
+        return nums;
     }
 }

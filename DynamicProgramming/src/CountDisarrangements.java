@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class CountDisarrangements {
     public int derangeCount(int n) {
         // code here
@@ -12,7 +14,7 @@ public class CountDisarrangements {
     }
 
     // tabulation
-    public int derangeCount(int n) {
+    public int derangeCountTab(int n) {
         // code here
         if(n == 1) return 0;
         int[] dp = new int[n+1];

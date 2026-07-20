@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution {
     public boolean hasTripletSum(int arr[], int target) {
         // code Here

@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class mimi_cost_climb_stairs {
     static int minCostClimbingStairs(int[] cost) {
         // Write your code here

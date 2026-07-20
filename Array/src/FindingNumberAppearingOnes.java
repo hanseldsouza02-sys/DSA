@@ -6,9 +6,11 @@ class Solution {
             num ^= nums[i];
         }
         return num;
+    }
 
-        //BRUTE FORCE SOLUTION
+    //BRUTE FORCE SOLUTION
 
+    public int singleNumberBrute(int[] nums) {
         int n = nums.length;
         int count = 0;
         for(int i =0;i<n;i++){
@@ -24,8 +26,5 @@ class Solution {
             }
         }
         return -1;
-
-
-
     }
 }

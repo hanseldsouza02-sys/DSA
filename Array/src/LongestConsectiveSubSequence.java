@@ -25,8 +25,10 @@ class Solution {
             Mcount = Math.max(Mcount,count);
         }
         return Mcount;
+    }
 
-        //Better solution
+    //Better solution
+    public int longestConsecutiveBetter(int[] arr) {
         Arrays.sort(arr);
         int n = arr.length;
         int longest = 1;

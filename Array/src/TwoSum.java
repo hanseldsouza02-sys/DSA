@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
 
@@ -14,7 +16,9 @@ class Solution {
             }
         }
         return ans;
+    }
 
+    public int[] twoSumOptimal(int[] nums, int target) {
         int n = nums.length;
         int[] ans = new int[2];
         HashMap<Integer,Integer> m = new HashMap<>();

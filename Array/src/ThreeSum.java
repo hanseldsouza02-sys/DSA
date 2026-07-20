@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     //OPTIMAL
     public List<List<Integer>> threeSum(int[] nums) {
@@ -28,38 +30,33 @@ class Solution {
             }
         }
         return ans;
+    }
 
-        //better
+    //better
 
-        class Solution {
-            public List<List<Integer>> threeSum(int[] nums) {
+    public List<List<Integer>> threeSumBetter(int[] nums) {
 
-                HashSet<List<Integer>> seen = new HashSet<>();
-                List<List<Integer>> ans = new ArrayList<>();
-                int n = nums.length;
+        HashSet<List<Integer>> seen = new HashSet<>();
+        List<List<Integer>> ans = new ArrayList<>();
+        int n = nums.length;
 
-                for(int i = 0;i<n;i++){
-                    HashSet<Integer> set = new HashSet<>();
-                    for(int j = i+1;j<n;j++){
-                        int rem = -(nums[i]+nums[j]);
-                        if(set.contains(rem)){
-                            List<Integer> s = new ArrayList<>();
-                            s.add(nums[i]);
-                            s.add(nums[j]);
-                            s.add(rem);
-                            Collections.sort(s);
-                            if(seen.add(s)){
-                                ans.add(s);
-                            }
-                        }
-                        set.add(nums[j]);
+        for(int i = 0;i<n;i++){
+            HashSet<Integer> set = new HashSet<>();
+            for(int j = i+1;j<n;j++){
+                int rem = -(nums[i]+nums[j]);
+                if(set.contains(rem)){
+                    List<Integer> s = new ArrayList<>();
+                    s.add(nums[i]);
+                    s.add(nums[j]);
+                    s.add(rem);
+                    Collections.sort(s);
+                    if(seen.add(s)){
+                        ans.add(s);
                     }
                 }
-                return ans;
+                set.add(nums[j]);
             }
         }
-
-
-
+        return ans;
     }
 }

@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
 
     //BRUTE BUT WILL NOT WORK BECAUSE OF INT
@@ -32,7 +34,7 @@ class Solution {
 
     //Pascal triangle but 1st case
 
-    public int comb(int r, int c){
+    public int combSingle(int r, int c){
         int res = 1;
         for(int i =0;i<c;i++){
             res = res*(r-i);
@@ -43,19 +45,20 @@ class Solution {
 
     //OPTIMAL SOLUTION
 
-    List<List<Integer>> ans = new ArrayList<>();
-    long res = 1;
+    public List<List<Integer>> generateOptimal(int n) {
+        List<List<Integer>> ans = new ArrayList<>();
+        long res = 1;
 
         for(int i = 0; i< n ;i++){
-        List<Integer> a = new ArrayList<>();
-        res = 1;
-        for(int j = 0;j<=i;j++){
-            a.add((int)res);
-            res =res*(i-j);
-            res = res/(j+1);
+            List<Integer> a = new ArrayList<>();
+            res = 1;
+            for(int j = 0;j<=i;j++){
+                a.add((int)res);
+                res =res*(i-j);
+                res = res/(j+1);
+            }
+            ans.add(a);
         }
-        ans.add(a);
-    }
         return ans;
-
+    }
 }

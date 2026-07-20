@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class reverseAnNumber {
     static ArrayList<Integer> ans = new ArrayList<>();
-    void  reverse(int n){
+    static void  reverse(int n){
 
         if(n == 0){
             return;

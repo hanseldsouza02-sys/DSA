@@ -1,5 +1,5 @@
 public class MinCostClimbStares {
-    public static void main(String[] args) {
+    public static int minCostClimbingStairs(int[] cost) {
         int n = cost.length;
         int[] dp = new int[n];
         dp[0] = cost[0];

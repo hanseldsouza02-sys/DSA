@@ -4,7 +4,7 @@ import java.util.Set;
 
 class Solution {
     public static ArrayList<Integer> findUnion(int a[], int b[]) {
-        Set<Integer> set = new Set<>();
+        Set<Integer> set = new HashSet<>();
         ArrayList<Integer> list = new ArrayList<>();
         int i =0;
         int j =0;
@@ -32,9 +32,10 @@ class Solution {
            list.add(ele);
        }
         return list;
+    }
 
-
-       //OPTIMAL SOLUTION
+    //OPTIMAL SOLUTION
+    public static ArrayList<Integer> findUnionOptimal(int a[], int b[]) {
         int n = a.length;
         int m = b.length;
         int i =0;

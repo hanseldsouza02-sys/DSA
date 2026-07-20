@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     //BRYTE FORCE SOLUTION
     public int comd(int r,int c){

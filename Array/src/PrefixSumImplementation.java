@@ -25,8 +25,8 @@ public class PrefixSumImplementation {
             else{
                 ans = pre[r] - pre[l - 1];
             }
+            System.out.println(ans);
             q--;
         }
-        return ans;
     }
 }

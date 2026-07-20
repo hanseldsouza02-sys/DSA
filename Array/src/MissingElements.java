@@ -17,8 +17,10 @@ class Solution {
         }
 
         return set.iterator().next();
+    }
 
-        //BRUTE FORCE
+    //BRUTE FORCE
+    int missingNumBrute(int nums[]) {
         int n = nums.length;
         int ans = 0;
         boolean flag;
@@ -35,10 +37,11 @@ class Solution {
             }
         }
         return ans;
+    }
 
+    int missingNumCheck(int nums[]) {
         int n = nums.length;
         int ans = 0;
-        boolean flag;
         boolean[] check = new boolean[n+1];
         for(int i = 0 ;i<=n ;i++){
             check[i] = false;
@@ -53,9 +56,10 @@ class Solution {
             }
         }
         return ans;
+    }
 
-
-        //OPTIMAL SOLUTION
+    //OPTIMAL SOLUTION
+    int missingNumSum(int nums[]) {
         int n = nums.length;
         int Asum =0;
         for(int i =0;i<n;i++){
@@ -65,7 +69,9 @@ class Solution {
         int sum = (n*(n+1))/2;
 
         return sum - Asum;
+    }
 
+    int missingNumXor(int nums[]) {
         int n = nums.length;
         int ans1 = 0;
         int ans2 = 0;
@@ -76,6 +82,5 @@ class Solution {
             ans2^=nums[j];
         }
         return ans1^ans2;
-    }
     }
 }
